@@ -1,0 +1,69 @@
+mysql> use car_rental_system;
+Database changed
+mysql> show tables;
++-----------------------------+
+| Tables_in_car_rental_system |
++-----------------------------+
+| cars                        |
+| customer                    |
+| payment                     |
+| review                      |
+| service                     |
++-----------------------------+
+5 rows in set (0.00 sec)
+
+mysql> desc cars;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| MODEL_NAME | varchar(30) | YES  |     | NULL    |       |
+| COLOUR     | varchar(10) | YES  |     | NULL    |       |
+| MODEL_NO   | int(10)     | YES  |     | NULL    |       |
+| CHASSIS_NO | int(15)     | YES  |     | NULL    |       |
+| CAR_NO     | int(15)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc customer;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| NAME        | varchar(30) | YES  |     | NULL    |       |
+| ADDRESS     | varchar(50) | YES  |     | NULL    |       |
+| CITY        | varchar(20) | YES  |     | NULL    |       |
+| ID_PROOF    | varchar(20) | YES  |     | NULL    |       |
+| customer_NO | int(10)     | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc payment;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| CUSOMER_ID     | varchar(12) | YES  |     | NULL    |       |
+| PAYMENT_MODE   | varchar(20) | YES  |     | NULL    |       |
+| PAYMENT_STATUS | varchar(20) | YES  |     | NULL    |       |
+| PAYMENT_NO     | varchar(12) | YES  |     | NULL    |       |
+| PAYEE_NAME     | varchar(30) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc review;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DATE      | varchar(20) | YES  |     | NULL    |       |
+| RATING    | int(10)     | YES  |     | NULL    |       |
+| REVIEW_NO | int(10)     | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc service;
++---------------+---------+------+-----+---------+-------+
+| Field         | Type    | Null | Key | Default | Extra |
++---------------+---------+------+-----+---------+-------+
+| SEREVICE_DATE | int(10) | YES  |     | NULL    |       |
+| SERVICE_COST  | int(10) | YES  |     | NULL    |       |
+| SERVICE_NO    | int(10) | YES  |     | NULL    |       |
++---------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
