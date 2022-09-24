@@ -1,0 +1,18 @@
+class A{
+    int a=5;
+    int b=11;
+}
+class B extends A{
+    void display(){
+        System.out.println("sum of a + b :");
+        System.out.println(a+b);
+    }
+}
+class C {
+    public static void main(String[]args){
+        B obj=new B();
+        
+        obj.display();
+        
+    }
+}
