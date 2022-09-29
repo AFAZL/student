@@ -1,0 +1,71 @@
+ show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| afzal              |
+| car_rental         |
+| car_rental_system  |
+| mysql              |
+| performance_schema |
+| student            |
+| sys                |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> use car_rental;
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_car_rental |
++----------------------+
+| cars                 |
+| customer             |
+| manage_cars          |
+| payment              |
++----------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc cars;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Registration_NO | int(5)      | NO   | PRI | NULL    |       |
+| BRAND           | varchar(20) | YES  |     | NULL    |       |
+| MODEL           | varchar(20) | YES  |     | NULL    |       |
+| Status          | varchar(10) | YES  |     | NULL    |       |
+| PRICE           | int(8)      | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc customer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Customer_Id   | int(5)      | NO   | PRI | NULL    |       |
+| Customer_Name | varchar(20) | YES  |     | NULL    |       |
+| Address       | varchar(30) | YES  |     | NULL    |       |
+| Phone_NO      | int(10)     | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc payment;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| Paymeny_ID | int(5)      | NO   | PRI | NULL    |       |
+| DUE_AMOUNT | int(8)      | YES  |     | NULL    |       |
+| DUE_DATE   | varchar(20) | YES  |     | NULL    |       |
+| STATUS     | varchar(10) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc manage_cars;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Registration_NO  | int(5)      | NO   | PRI | NULL    |       |
+| AVAILABLE_STATUS | varchar(20) | YES  |     | NULL    |       |
+| PRICE            | int(10)     | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
