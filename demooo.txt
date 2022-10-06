@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int i,a,b;
+    printf("enter no:\n");
+    scanf("%d",&i);
+    printf("enter no:\n");
+    scanf("%d",&a);
+    printf("enter no:\n");
+    scanf("%d",&b);
+    printf("**********demo*********\n");
+    printf("\n");
+    printf("%d\n",i);
+    if(a<i){
+        printf("%d\n",a);
+        printf("%d\n",b);
+    }
+    else{
+        printf("%d\n",b);
+         printf("%d\n",a);
+    }
+
+    return 0;
+}
