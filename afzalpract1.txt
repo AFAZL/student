@@ -1,0 +1,29 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("enter no: ");
+        int n=obj.nextInt();
+        if(n<0 || n>1000){
+            System.out.println("Invalid Input ");
+        }
+        else{
+            int u=n%10;
+            int tt=n/10;
+            int t=tt%10;
+            int h=n/100;
+            String uw[]={" ","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+            String tw[]={"  ","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+            String hw="hundred ";
+            if(n<20)
+                System.out.println(uw[n]);
+            else if(n<100){
+                System.out.println(tw[t] + uw[u]);
+            }
+            else{
+                System.out.println(uw[h]+hw+tw[t]+uw[u]);
+            }
+                
+        }
+    }
+}
