@@ -1,0 +1,55 @@
+interface vehicle{
+    public void speed();
+    public void tier();
+    public void sets();
+    public void avg();
+}
+class bicycle implements vehicle{
+    public void speed (){
+        System.out.println("20 max ");
+    } 
+    public void tier(){
+        System.out.println("2 max");
+    }
+     public void sets(){
+        System.out.println("2 max");
+    }
+    public void avg(){
+        System.out.println("10km/hr");
+    }
+}
+class car implements vehicle{
+    public void speed (){
+        System.out.println("150 max ");
+    } 
+    public void tier(){
+        System.out.println("4 max");
+    }
+    public void sets(){
+        System.out.println("7 max");
+    }
+    public void avg(){
+        System.out.println("100km/hr");
+    }
+}
+class bike implements vehicle{
+    public void speed (){
+        System.out.println("100 max ");
+    } 
+    public void tier(){
+        System.out.println("2 max");
+    }
+    public void sets(){
+        System.out.println("3 max");
+    }
+    public void avg(){
+        System.out.println("70km/hr");
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {
+    car obj=new car();
+    obj.speed();
+    obj.tier();
+    }
+}
