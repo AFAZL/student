@@ -1,0 +1,44 @@
+ class teacher{
+    String name;
+    String dep;
+    String course;
+    String desigration;
+    
+    public teacher( String name, String dep,  String course,  String desigration){
+        this.name=name;
+        this.dep=dep;
+        this.course=course;
+        this.desigration=desigration;
+    }
+    public void displayinfo(){
+        System.out.println("name: " +this.name);
+        System.out.println("dep: " +this.dep);
+        System.out.println("course: " +this.course);
+        System.out.println("desigration: " +this.desigration);
+    }
+}
+     class professor extends teacher{
+        public professor( String name, String dep,  String course,  String desigration){
+            super(name, dep, course, "professor");
+        }
+    }
+     class associate_professor extends teacher{
+        public associate_professor( String name, String dep,  String course){
+            super(name, dep, course, "associate_professor");
+        }
+    }
+     class assistant_professor extends teacher{
+        public assistant_professor( String name, String dep,  String course){
+            super (name, dep, course, "assistant_professor");
+        }
+    }
+
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        teacher obj= new String teacher();
+        
+       // displayinfo();
+        
+    }
+}
