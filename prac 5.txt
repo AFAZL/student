@@ -1,0 +1,54 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+class employee_details{
+    private int emp_id, salary;
+    private String name, dep, email, designation;
+    public employee_details(int emp_id,int salary,String name,String dep,String email,String designation){
+        this.emp_id=emp_id;
+        this.salary=salary;
+        this.name=name;
+        this.dep=dep;
+        this.email=email;
+        this.designation=designation;
+    }
+    public int getsalary(){
+        return salary;
+    }
+    public void setsalary(int salary){
+        this.salary=salary;
+    }
+    public String getdep(){
+        return dep;
+    }
+    public void setdep(String dep){
+        this.dep=dep;
+    }
+    public String getemail(){
+        return email;
+    }
+    public void setemail(String email){
+        this.email=email;
+    }
+    public String getdesignation(){
+        return designation;
+    }
+    public void setdesignation(String designation){
+        this.designation=designation;
+    }
+    public void showdetails(){
+    System.out.println("emp_ig" + emp_id);
+     System.out.println("salary "+salary);
+      System.out.println("name "+name);
+       System.out.println("dep "+dep);
+        System.out.println("email "+dep);
+         System.out.println("designation "+designation);
+    }
+}
+
+class emppppp{
+    public static void main(String[] args) {
+        employee_details emp=new employee_details("101","100000","aman khan ","it", "aman@123", "head");
+        emp.setsalary(1000000);
+        emp.showdetails();
+    }
+}
