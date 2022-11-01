@@ -1,0 +1,54 @@
+class sport_person{
+    String name, sport;
+    int age;
+    public sport_person(String name, String sport, int age){
+        this.name=name;
+        this.sport=sport;
+        this.age=age;
+    }
+    public void display(){
+        System.out.println("Name: "+ name +", sport: " + sport + ", age: " + age);
+    }
+}
+    class ath extends sport_person{
+        int noofevent;
+        public ath (String name, int age , int noofevent){
+            super(name,"ath",age);
+            this.noofevent=noofevent;
+        }
+        public int getnoofevent(){
+            return noofevent;
+        }
+        public void setnoofevent(int noofevent){
+            this.noofevent=noofevent;
+        }
+        public void display(){
+          System.out.println("Name: "+ name +", sport: " + sport + ", age: " + age + ", no of events: " + noofevent);   
+        }
+    }
+    class hocky extends sport_person{
+        int noofgol;
+        public hocky (String name, int age , int noofgol){
+            super(name,"hocky",age);
+            this.noofgol=noofgol;
+        }
+        public int getnoofgol(){
+            return noofgol;
+        }
+        public void setnoofgol(int noofgol){
+            this.noofgol=noofgol;
+        }
+        public void display(){
+          System.out.println("Name: "+ name +", sport: " + sport + ", age: " + age + ", no of gols: " + noofgol);   
+        }
+    }
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        sport_person p1=new hocky("aman ", 23, 15);
+        p1.display();
+        sport_person p2=new ath("affu ", 19, 20);
+        p2.display();
+    }
+}
