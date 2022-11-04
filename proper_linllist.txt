@@ -1,0 +1,121 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+    int data;
+    struct node*next;
+};
+struct node*head;
+
+void display(){
+    struct node*ptr=head;
+    while(ptr!=NULL){
+        printf("%d\n",ptr->data);
+        ptr=ptr->next;
+    }
+}
+struct node * IB(struct node*head,int data){
+    struct node*p=(struct node*)malloc(sizeof(struct node));
+    p->data=data;
+    p->next=head;
+    head=p;
+    return head;
+}
+struct node * IBT(struct node*head, int index,int data){
+    int i=0;
+    struct node*ptr=(struct node*)malloc(sizeof(struct node));
+    struct node*p=head;
+    while(i!=index-1){
+        p=p->next;
+        i++;
+    }
+    ptr->data=data;
+    ptr->next=p->next;
+    p->next=ptr;
+    return head;
+}
+struct node * IL(struct node*head,int data){
+    struct node*ptr=(struct node*)malloc(sizeof(struct node));
+    struct node*p=head;
+    while(p->next!=NULL){
+        p=p->next;
+    }
+    ptr->data=data;
+    p->next=ptr;
+    ptr->next=NULL;
+    return head;
+}
+void D1(){
+    struct node*p=head;
+    struct node*q=head->next;
+    head=q;
+    free(p);
+    
+}
+void D2(int index){
+    int i;
+    struct node*p=head;
+    struct node*q=head->next;
+    for(i=0;i<index-1;i++){
+        p=p->next;
+        q=q->next;
+    }
+    p->next=q->next;
+    free(q);
+    return head;
+}
+void D3(){
+    struct node*p=head;
+    struct node*q=head->next;
+    while(q->next!=NULL){
+        p=p->next;
+        q=q->next;
+    }
+     free(q);
+    p->next=NULL; 
+   
+    return head;
+}
+int main(){
+    int ch,x,a,i,index;
+    head=(struct node*)malloc(sizeof(struct node));
+    head=NULL;
+    while(1){
+        printf("\n1.IB\n");
+        printf("2.display\n");
+        printf("enter your ch:\n");
+        scanf("%d",&ch);
+        switch(ch){
+            case 1:printf("enter elemen:\n");
+                    scanf("%d",&x);
+                    head=IB(head,x);
+            break;
+            case 2: display();
+                   break;
+            case 3:printf("enter index for inserting:\n");
+            scanf("%d",&i);
+            printf("enter element for insert:\n");
+            scanf("%d",&a);
+                IBT(head,i,a);
+                break;
+            case 4:printf("enter element for insert:\n");
+                    scanf("%d",&a);
+                    IL(head,a);
+                    break;
+            case 5: D1();
+            break;
+            case 6:printf("enter index for deleting element\n");
+            scanf("%d",&index);
+            D2(index);
+            break;
+            case 7: D3();
+            break;
+            
+            default : printf("wrong entry\n");
+        }
+    }
+}
+
+
+
+
