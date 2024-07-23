@@ -1,0 +1,72 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Pen obj = new Pen();
+        obj.type = "Ball";
+        obj.write();
+    }
+}
+
+class Pen {
+    String color;
+    String type;
+
+    public void write() {
+        System.out.println("I am writing with " + this.type);
+    }
+}
+________________________________________________________________________________________
+
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Triangle obj = new Triangle();
+        obj.color="blue";
+        obj.info(5,10);
+        Square sobj = new Square();
+        sobj.info(7);
+    }
+}
+
+class Shape{
+    String color;
+}
+
+class Triangle extends Shape{
+    public void info(int h,int b){
+        System.out.println((b*h)/2);
+        System.out.println("of color : "+this.color);
+    }
+}
+class Square extends Shape{
+    public void info(int s){
+        System.out.println(s*s);
+        System.out.println("of color : "+this.color);
+    }
+}
+________________________________________________________________________________________
+
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        B obj = new B();
+        obj.info();
+    }
+}
+class A{
+    public void info(){
+        System.out.println("I am A Class");
+    }
+}
+class B extends A{
+    @Override
+    public void info(){
+        System.out.println("I am B Class");
+    }
+}
+
+_______________________________________________________________________________________________
